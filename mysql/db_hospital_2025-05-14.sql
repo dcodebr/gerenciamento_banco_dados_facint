@@ -1,26 +1,3 @@
-# Gerenciamento de Banco de Dados - Faculdade FACINT
-
-Este repositório refere-se ao conteúdo ministrado durante as aulas ao vivo da disciplina de Gerenciamento de Banco de Dados ofertada aos cursos de tecnologia da Faculdade FACINT pelo Professor Esp. Alex Rocha.
-
-Você pode acompanhar as aulas através do canal faculdade clicando nos links a seguir:
-
-**Aula de 05/05/2025**:
-
-
-[![Gerenciamento de Banco de Dados - ao vivo -  05/05/2025 - Alex Rocha](https://img.youtube.com/vi/JPBxcMvAqEo/0.jpg)](https://www.youtube.com/watch?v=JPBxcMvAqEo)
-
-**Aula de 12/05/2025**:
-
-
-[![Projeto e Modelagem de Dados - ao vivo - 12/05/2025 - Alex Rocha](https://img.youtube.com/vi/3OGisLwIZz8/0.jpg)](https://www.youtube.com/watch?v=3OGisLwIZz8)
-
-## Conteúdo Ministrado:
-
-Os conteúdos ministrados durante as aulas são referentes à DDL, DML e DQL, nesta ordem:
-
-**Em 12/05/2025:** [Database db_hospital](./mysql/db_hospital_2025-05-14.sql)
-
-```sql
 -- CRIAÇÃO DO BANCO DE DADOS DB_HOSPITAL
 
 CREATE DATABASE IF NOT EXISTS db_hospital;
@@ -70,6 +47,3 @@ CREATE TABLE IF NOT EXISTS consulta(
 	CONSTRAINT fk_consulta_pacienteid FOREIGN KEY(pacienteid) REFERENCES paciente(id),
 	CONSTRAINT fk_consulta_medicoid FOREIGN KEY(medicoid) REFERENCES medico(id)
 );
-```
----
-Desenvolvido por Alex Rocha
