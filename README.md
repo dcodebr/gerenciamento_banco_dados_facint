@@ -14,6 +14,10 @@ Você pode acompanhar as aulas através do canal faculdade clicando nos links a 
 
 [![Projeto e Modelagem de Dados - ao vivo - 12/05/2025 - Alex Rocha](https://img.youtube.com/vi/3OGisLwIZz8/0.jpg)](https://www.youtube.com/watch?v=3OGisLwIZz8)
 
+**Aula de 19/05/2025**:
+
+[![Projeto e Modelagem de Dados - ao vivo - 19/05/2025 - Alex Rocha](https://img.youtube.com/vi/9vTu4MPtwIs/0.jpg)](https://www.youtube.com/watch?v=9vTu4MPtwIs)
+
 ## Conteúdo Ministrado:
 
 Os conteúdos ministrados durante as aulas são referentes à DDL, DML e DQL, nesta ordem:
