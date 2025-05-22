@@ -71,5 +71,58 @@ CREATE TABLE IF NOT EXISTS consulta(
 	CONSTRAINT fk_consulta_medicoid FOREIGN KEY(medicoid) REFERENCES medico(id)
 );
 ```
+
+**Em 19/05/2025:** [Database db_hospital](./mysql/db_hospital_2025-05-19.sql)
+
+```sql
+USE db_hospital;
+
+--  INCLUSÃO DE DADOS EM medico
+INSERT INTO medico(nome, crm, telefone)
+VALUES ('EDGAR CARRILLO', '123456/PR', '(44) 4002-8922');
+
+INSERT INTO medico(nome, crm, telefone)
+VALUES ('EDGAR CARRILLO', '123456/PR', '(44) 4002-8922');
+
+INSERT INTO medico(nome, crm, telefone)
+VALUES ('VINICIUS DA SILVA OLIVEIRA', '987654/RJ', '(21) 1818-1111'),
+       ('RICARDO CORDEIRO', '654321/RJ', '(21) 1818-1515');
+       
+INSERT INTO medico(nome, crm, telefone)
+VALUES ('WINSTON MELO DE ALMEIRA JÚNIOR', '321654/MA', '(98) 1212-1515');
+
+-- ATUALIZAÇÃO DE DADOS EM MÉDICO
+UPDATE medico SET nome = 'RICARDO DE SOUZA DA SILVA CORDEIRO' WHERE id = 3;
+
+UPDATE medico SET nome = LOWER(nome);
+
+UPDATE medico SET nome = UPPER(nome);
+
+
+-- INCLUSÃO DE DADOS EM PACIENTE
+INSERT INTO paciente(telefone, nome, cpf)
+VALUES ('(44) 3268-6800', 'JOÃO DA SILVA', '99999999991'),
+       ('(85) 99732-6650', 'MARIA DAS DORES', '12345678900'),
+	   ('', 'HELSON FERREIRA', '88888888888'),
+       ('(68) 55555-5555', 'RITA CAGIANO', '45678912322');
+    
+-- EXCLUSÃO DE DADOS EM PACIENTE	
+DELETE FROM paciente WHERE id = 18;
+
+INSERT INTO paciente(nome, cpf, telefone)
+VALUES ('MARIA IZABEL', '11122233300', '(11) 2121-1212');
+
+
+-- ALTERAÇÃO DA TABELA consulta PARA INCLUSÃO DO CAMPO DATETIME
+ALTER TABLE consulta ADD data DATETIME NOT NULL DEFAULT NOW();
+
+
+-- INCLUSÃO DE CONSULTAS PARA CADA MÉDICO/PACIENTE
+
+INSERT INTO consulta(medicoid, pacienteid, data)
+SELECT medico.id, 20, now()
+FROM medico;
+```
+
 ---
 Desenvolvido por Alex Rocha
